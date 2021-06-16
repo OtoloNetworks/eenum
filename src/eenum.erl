@@ -35,7 +35,7 @@
 %% Parse transform function
 %%------------------------------------------------------------------------------
 
-parse_transform([{attribute, 1, file, {Filename, 1}} = File,
+parse_transform([{attribute, _Loc, file, {Filename, 1}} = File,
 		 Mod | Forms] = OriginalForms, _Options) ->
     put(errors, []),
     put(warnings, []),
